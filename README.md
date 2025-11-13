@@ -1,13 +1,13 @@
-# 🏛️ Landing Page - Dra. Suelen Silva Máximo
+# 🏛️ Landing Page Template - Profissional
 
-Landing page moderna e sofisticada para a **Dra. Suelen Silva Máximo - Advogada OAB/DF 27400**.
+Template moderno e sofisticado para landing pages profissionais (advocacia, medicina, consultoria, etc.).
 
 ---
 
 ## ✨ Características
 
 - 🎨 **Design Moderno e Sofisticado**
-  - Tema marrom/burgundy com dourado
+  - Tema marrom/burgundy com dourado (customizável)
   - Modo escuro temático
   - Glassmorphism e efeitos 3D
   - Animações fluidas e micro-interações
@@ -44,28 +44,45 @@ Landing page moderna e sofisticada para a **Dra. Suelen Silva Máximo - Advogada
 
 ## 🚀 Início Rápido
 
-### Visualizar Localmente
+### 1. Clone o Repositório
 
-1. **Clone ou baixe o projeto**
 ```bash
-git clone <repository-url>
-cd "Suelen Maximo"
+git clone https://github.com/Japa1413/landing-page-template.git
+cd landing-page-template
 ```
 
-2. **Abra o arquivo `index.html` no navegador**
-   - Ou use um servidor local:
+### 2. Configure o Template
+
+1. Edite o arquivo `config.template.json` com suas informações
+2. Execute o script de configuração:
    ```bash
-   # Python
-   python -m http.server 8000
+   # Windows
+   .\scripts\configure-template.ps1
    
-   # Node.js
-   npx serve
-   
-   # PHP
-   php -S localhost:8000
+   # Linux/Mac
+   ./scripts/configure-template.sh
    ```
 
-3. **Acesse:** `http://localhost:8000`
+### 3. Personalize
+
+- Adicione suas imagens em `assets/images/`
+- Ajuste cores no `assets/css/style.css`
+- Personalize textos no `index.html`
+
+### 4. Visualize
+
+Abra `index.html` no navegador ou use um servidor local:
+
+```bash
+# Python
+python -m http.server 8000
+
+# Node.js
+npx serve
+
+# PHP
+php -S localhost:8000
+```
 
 ---
 
@@ -74,38 +91,84 @@ cd "Suelen Maximo"
 ```
 .
 ├── index.html                 # Página principal
-├── manifest.json             # PWA manifest
-├── sw.js                     # Service Worker
-├── sitemap.xml               # Sitemap para SEO
-├── robots.txt                # Robots.txt para SEO
+├── config.template.json       # Arquivo de configuração
+├── manifest.json              # PWA manifest
+├── sw.js                      # Service Worker
+├── sitemap.xml                # Sitemap para SEO
+├── robots.txt                 # Robots.txt para SEO
 ├── assets/
-│   ├── css/
-│   │   ├── style.css         # Estilos principais
-│   │   ├── dark-mode.css     # Modo escuro temático
-│   │   ├── modern-enhancements.css  # Melhorias modernas
-│   │   └── skeleton.css      # Skeleton screens
-│   ├── js/
-│   │   ├── main.js           # JavaScript principal
-│   │   ├── dark-mode.js      # Toggle modo escuro
-│   │   ├── lazy-load.js      # Lazy loading
-│   │   ├── form-validation.js # Validação de formulário
-│   │   ├── pwa-install.js    # PWA install prompt
-│   │   ├── web-vitals.js     # Web Vitals monitoring
-│   │   ├── modern-enhancements.js  # Melhorias modernas
-│   │   └── smooth-scroll-polyfill.js  # Smooth scroll
-│   └── images/               # Imagens (adicionar aqui)
-├── docs/                     # Documentação completa
-│   ├── 01_PROJETO/
-│   ├── 02_ARQUITETURA/
-│   ├── 03_DESENVOLVIMENTO/
-│   ├── 04_DOCUMENTACAO/
-│   ├── 05_MELHORIAS/
-│   ├── 06_ANALISES/
-│   ├── 07_GUIA_FINALIZACAO/
-│   ├── 08_CHANGELOG/
-│   └── 09_SCRIPTS_UTILITARIOS/
-└── scripts/                  # Scripts de automação
+│   ├── css/                   # Estilos CSS
+│   ├── js/                     # JavaScript
+│   └── images/                 # Imagens
+├── docs/                       # Documentação completa
+└── scripts/                    # Scripts de automação
 ```
+
+---
+
+## ⚙️ Configuração
+
+### Arquivo de Configuração
+
+Edite `config.template.json` com suas informações:
+
+```json
+{
+  "site": {
+    "name": "Seu Nome",
+    "title": "Seu Título",
+    "url": "https://www.seusite.com.br"
+  },
+  "professional": {
+    "name": "Nome Completo",
+    "registration": {
+      "type": "OAB",
+      "state": "DF",
+      "number": "00000"
+    }
+  },
+  "contact": {
+    "phone": {
+      "whatsapp": "5500000000000"
+    },
+    "email": "contato@seusite.com.br"
+  }
+}
+```
+
+### Google Analytics
+
+Edite `index.html` e substitua `G-XXXXXXXXXX` pelo seu ID do GA4.
+
+### Formulário de Contato
+
+Configure o backend para receber os dados do formulário ou use um serviço como:
+- Formspree
+- EmailJS
+- Backend próprio
+
+---
+
+## 🎨 Personalização
+
+### Cores
+
+Edite as variáveis CSS em `assets/css/style.css`:
+
+```css
+:root {
+    --primary-color: #7A3E1A;
+    --secondary-color: #D4AF37;
+    --burgundy: #6B1F2F;
+}
+```
+
+### Imagens Necessárias
+
+- `logo.png` - Logo principal
+- `professional-photo.jpg` - Foto profissional
+- `favicon.ico` - Ícone do site
+- Ícones PWA (opcional)
 
 ---
 
@@ -114,14 +177,13 @@ cd "Suelen Maximo"
 📖 **[Ver Documentação Completa](docs/README.md)**
 
 ### Seções Principais:
-- [Guia de Finalização](docs/07_GUIA_FINALIZACAO/INFORMACOES_PARA_FINALIZACAO.md) - **IMPORTANTE**
-- [Melhorias Implementadas](docs/05_MELHORIAS/)
+- [Guia de Configuração](docs/07_GUIA_FINALIZACAO/INFORMACOES_PARA_FINALIZACAO.md)
 - [Arquitetura](docs/02_ARQUITETURA/README.md)
-- [Changelog](docs/08_CHANGELOG/CHANGELOG.md)
+- [Melhorias Implementadas](docs/05_MELHORIAS/)
 
 ---
 
-## 🎨 Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 - **HTML5** - Estrutura semântica
 - **CSS3** - Estilos modernos (Grid, Flexbox, Custom Properties)
@@ -131,49 +193,11 @@ cd "Suelen Maximo"
 
 ---
 
-## 📋 Pré-requisitos para Finalização
+## 📋 Requisitos
 
-Antes de publicar, é necessário fornecer:
-
-1. ✅ **Informações de Contato**
-   - WhatsApp, e-mail, endereços
-
-2. ✅ **Imagens**
-   - Logo, foto profissional, favicon
-
-3. ✅ **Conteúdo**
-   - Textos personalizados, depoimentos reais
-
-4. ✅ **Configurações**
-   - Google Analytics, domínio, redes sociais
-
-📖 **[Ver Guia Completo de Finalização](docs/07_GUIA_FINALIZACAO/INFORMACOES_PARA_FINALIZACAO.md)**
-
----
-
-## 🔧 Configuração
-
-### Google Analytics
-Edite `index.html` e substitua `G-XXXXXXXXXX` pelo seu ID do GA4.
-
-### Formulário de Contato
-Configure o backend para receber os dados do formulário ou use um serviço como:
-- Formspree
-- EmailJS
-- Backend próprio
-
-### Service Worker
-O Service Worker está configurado e funcionando automaticamente.
-
----
-
-## 📱 PWA
-
-A landing page é uma Progressive Web App:
-- ✅ Instalável em dispositivos móveis
-- ✅ Funciona offline
-- ✅ App-like experience
-- ✅ Ícones e splash screen
+- Navegador moderno (Chrome, Firefox, Safari, Edge)
+- Servidor web (para produção)
+- Editor de texto (para personalização)
 
 ---
 
@@ -195,33 +219,25 @@ A landing page é uma Progressive Web App:
 
 ---
 
-## 🎯 Status do Projeto
-
-- ✅ **Design:** Completo e moderno
-- ✅ **Funcionalidades:** Todas implementadas
-- ✅ **Performance:** Otimizada
-- ✅ **Acessibilidade:** WCAG 2.1 AA
-- ✅ **SEO:** Otimizado
-- ✅ **PWA:** Funcional
-- ⏳ **Finalização:** Aguardando informações do cliente
-
----
-
 ## 📝 Licença
 
-Este projeto foi desenvolvido seguindo as melhores práticas de desenvolvimento web.
+Este template é fornecido como está. Sinta-se livre para usar e modificar conforme necessário.
 
 ---
 
-## 👤 Contato
+## 🤝 Contribuindo
 
-**Dra. Suelen Silva Máximo**  
-OAB/DF 27400  
-Atendimento em Sobradinho e Asa Sul - DF
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
 
 ---
 
-**Desenvolvido com ❤️ seguindo os princípios do Programador Perfeito**
+## 📞 Suporte
 
-**Versão:** 5.0.0 - Dark Mode Temático  
+Para dúvidas ou suporte, abra uma issue no repositório.
+
+---
+
+**Desenvolvido com ❤️ seguindo as melhores práticas de desenvolvimento web**
+
+**Versão:** 1.0.0 - Template Profissional  
 **Última atualização:** 2025-01-11

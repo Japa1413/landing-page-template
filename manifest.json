@@ -1,7 +1,7 @@
 {
-  "name": "Dra. Suelen Silva Máximo - Advogada OAB/DF 27400",
-  "short_name": "Dra. Suelen Máximo",
-  "description": "Advogada especializada em direito civil, trabalhista e empresarial. Atendimento em Sobradinho e Asa Sul - DF.",
+  "name": "Dra. Nome do Profissional - Advogada OAB/XX 00000",
+  "short_name": "Nome do Profissional",
+  "description": "Advogada especializada em direito civil, trabalhista e empresarial. Atendimento em Cidade 1 e Cidade 2 - DF.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#8B4513",
