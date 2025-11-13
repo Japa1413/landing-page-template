@@ -1,0 +1,572 @@
+/**
+ * Dark Mode Styles - Tema Marrom/Burgundy/Dourado
+ * Modo escuro temático mantendo a identidade visual
+ * 
+ * @version 2.0.0
+ */
+
+.dark-mode {
+    /* ============================================
+       BACKGROUNDS - Tons Escuros Elegantes
+       ============================================ */
+    --bg-white: #0f0a08; /* Deep Brown-Black */
+    --bg-light: #1a120e; /* Rich Dark Brown */
+    --bg-cream: #0f0a08; /* Deep Brown-Black */
+    --border-color: #2d1f17; /* Dark Brown Border */
+    --border-light: #1f1510; /* Lighter Dark Brown */
+    
+    /* ============================================
+       TEXT COLORS - Alta Legibilidade
+       ============================================ */
+    --text-dark: #f5f0eb; /* Warm Off-White */
+    --text-light: #d4c4b0; /* Warm Light Gray */
+    --text-lighter: #a8957a; /* Warm Medium Gray */
+    --text-on-dark: #ffffff; /* Pure White */
+    
+    /* ============================================
+       PRIMARY COLORS - Mantém Tema Marrom/Dourado
+       ============================================ */
+    --primary-color: #B8860B; /* Dark Goldenrod - Mais vibrante no escuro */
+    --primary-dark: #8B6914; /* Darker Gold */
+    --primary-light: #D4AF37; /* Gold - Mais brilhante */
+    --secondary-color: #E8C547; /* Bright Gold */
+    --accent-color: #F4D03F; /* Light Gold */
+    
+    /* ============================================
+       BURGUNDY COLORS - Ajustados para Escuro
+       ============================================ */
+    --burgundy: #8B2F3F; /* Rich Burgundy */
+    --burgundy-light: #A04555; /* Lighter Burgundy */
+    
+    /* ============================================
+       GRADIENTS - Ajustados para Escuro
+       ============================================ */
+    --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #E8C547 50%, #F4D03F 100%);
+    --brown-gradient: linear-gradient(135deg, #4A2510 0%, #6B1F2F 50%, #2D1F17 100%);
+    --dark-brown-gradient: linear-gradient(135deg, #1a120e 0%, #2d1f17 50%, #0f0a08 100%);
+    
+    /* ============================================
+       SHADOWS - Mais Intensos no Escuro
+       ============================================ */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.7);
+    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.8);
+    --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.4);
+    --shadow-burgundy: 0 8px 32px rgba(139, 47, 63, 0.3);
+    
+    /* ============================================
+       GLASS EFFECT - Ajustado para Escuro
+       ============================================ */
+    --glass-bg: rgba(26, 18, 14, 0.8);
+    --glass-border: rgba(212, 175, 55, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   BODY & BASE
+   ============================================ */
+
+.dark-mode body {
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.dark-mode .navbar {
+    background: rgba(15, 10, 8, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+}
+
+.dark-mode .navbar.scrolled {
+    background: rgba(15, 10, 8, 0.98);
+    box-shadow: var(--shadow-lg);
+}
+
+.dark-mode .nav-link {
+    color: var(--text-dark);
+}
+
+.dark-mode .nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.dark-mode .nav-link::after {
+    background: var(--gold-gradient);
+}
+
+.dark-mode .logo {
+    color: var(--text-dark);
+}
+
+.dark-mode .logo i {
+    color: var(--secondary-color);
+}
+
+/* ============================================
+   HERO SECTION - Tema Marrom/Dourado
+   ============================================ */
+
+.dark-mode .hero {
+    background: var(--dark-brown-gradient);
+    background-attachment: fixed;
+}
+
+.dark-mode .hero::before {
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 47, 63, 0.25) 0%, transparent 50%),
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 2px,
+            rgba(212, 175, 55, 0.03) 2px,
+            rgba(212, 175, 55, 0.03) 4px
+        ),
+        url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(212,175,55,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+}
+
+.dark-mode .hero-overlay {
+    background: 
+        radial-gradient(ellipse at top, rgba(0, 0, 0, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.3) 0%, transparent 50%);
+}
+
+.dark-mode .hero-title,
+.dark-mode .hero-subtitle {
+    color: var(--text-on-dark);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .hero-logo {
+    filter: drop-shadow(0 8px 24px rgba(212, 175, 55, 0.5));
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.dark-mode .btn-primary {
+    background: var(--brown-gradient);
+    color: var(--text-on-dark);
+    box-shadow: var(--shadow-md), var(--shadow-burgundy);
+}
+
+.dark-mode .btn-primary:hover {
+    box-shadow: var(--shadow-lg), var(--shadow-gold);
+}
+
+.dark-mode .btn-secondary {
+    background-color: transparent;
+    color: var(--text-on-dark);
+    border: 2px solid rgba(212, 175, 55, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.dark-mode .btn-secondary:hover {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.6);
+    box-shadow: var(--shadow-md), var(--shadow-gold);
+}
+
+.dark-mode .btn-cta {
+    background: var(--gold-gradient);
+    color: var(--primary-dark);
+    box-shadow: var(--shadow-gold);
+}
+
+.dark-mode .btn-cta:hover {
+    box-shadow: var(--shadow-gold), 0 0 30px rgba(212, 175, 55, 0.5);
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.dark-mode .service-card,
+.dark-mode .testimonial-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+}
+
+.dark-mode .service-card:hover,
+.dark-mode .testimonial-card:hover {
+    background: #1f1510;
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow-xl), var(--shadow-gold);
+}
+
+.dark-mode .service-card::before {
+    background: var(--gold-gradient);
+}
+
+.dark-mode .service-icon {
+    background: var(--brown-gradient);
+    box-shadow: var(--shadow-md), inset 0 2px 4px rgba(212, 175, 55, 0.2);
+}
+
+.dark-mode .service-card:hover .service-icon {
+    box-shadow: var(--shadow-lg), var(--shadow-gold);
+}
+
+.dark-mode .service-card h3 {
+    color: var(--secondary-color);
+}
+
+.dark-mode .service-card p {
+    color: var(--text-light);
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+.dark-mode .about {
+    background: var(--bg-white);
+}
+
+.dark-mode .about-content::before {
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+}
+
+.dark-mode .about-photo {
+    border: 6px solid transparent;
+    background: var(--gold-gradient);
+    box-shadow: var(--shadow-xl), var(--shadow-gold);
+}
+
+.dark-mode .about-image:hover .about-photo {
+    box-shadow: var(--shadow-xl), 0 0 40px rgba(212, 175, 55, 0.5);
+}
+
+.dark-mode .experience-badge {
+    background: var(--gold-gradient);
+    color: var(--primary-dark);
+    box-shadow: var(--shadow-xl), var(--shadow-gold);
+    border: 3px solid var(--bg-light);
+}
+
+.dark-mode .about-image:hover .experience-badge {
+    box-shadow: var(--shadow-xl), 0 0 30px rgba(212, 175, 55, 0.6);
+}
+
+.dark-mode .section-title {
+    color: var(--text-dark);
+}
+
+.dark-mode .section-subtitle {
+    color: var(--text-light);
+}
+
+/* ============================================
+   STATS SECTION
+   ============================================ */
+
+.dark-mode .stats {
+    background: var(--dark-brown-gradient);
+}
+
+.dark-mode .stat-item {
+    background: rgba(212, 175, 55, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.dark-mode .stat-item:hover {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: var(--shadow-lg), var(--shadow-gold);
+}
+
+.dark-mode .stat-number {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.dark-mode .stat-label {
+    color: var(--text-light);
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+
+.dark-mode .testimonial-card::before {
+    color: var(--secondary-color);
+    opacity: 0.15;
+}
+
+.dark-mode .testimonial-stars {
+    color: var(--secondary-color);
+}
+
+.dark-mode .testimonial-text {
+    color: var(--text-light);
+}
+
+.dark-mode .testimonial-author {
+    color: var(--text-dark);
+}
+
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+
+.dark-mode .contact-form {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.dark-mode .contact-form::before {
+    background: var(--gold-gradient);
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group select,
+.dark-mode .form-group textarea {
+    background-color: var(--bg-white);
+    border-color: var(--border-color);
+    color: var(--text-dark);
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group select:focus,
+.dark-mode .form-group textarea:focus {
+    border-color: var(--secondary-color);
+    background-color: var(--bg-light);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15), var(--shadow-md);
+}
+
+.dark-mode .form-group input.valid,
+.dark-mode .form-group textarea.valid,
+.dark-mode .form-group select.valid {
+    border-color: var(--success-color);
+}
+
+.dark-mode .form-group input.error,
+.dark-mode .form-group textarea.error,
+.dark-mode .form-group select.error {
+    border-color: var(--error-color);
+}
+
+.dark-mode .form-group label {
+    color: var(--text-light);
+}
+
+.dark-mode .field-error {
+    color: #ff6b6b;
+}
+
+/* ============================================
+   CONTACT INFO
+   ============================================ */
+
+.dark-mode .contact-item {
+    color: var(--text-light);
+}
+
+.dark-mode .contact-item:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.dark-mode .contact-icon {
+    background: var(--brown-gradient);
+    color: var(--secondary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.dark-mode .contact-item:hover .contact-icon {
+    box-shadow: var(--shadow-lg), var(--shadow-gold);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.dark-mode .footer {
+    background: linear-gradient(135deg, #0a0604 0%, #1a120e 100%);
+    border-top: 1px solid var(--border-color);
+}
+
+.dark-mode .footer-section h4 {
+    color: var(--secondary-color);
+}
+
+.dark-mode .footer-section ul li,
+.dark-mode .footer-section p {
+    color: var(--text-light);
+}
+
+.dark-mode .footer-section ul li a {
+    color: var(--text-light);
+}
+
+.dark-mode .footer-section ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.dark-mode .footer-bottom {
+    border-top: 1px solid var(--border-color);
+    color: var(--text-lighter);
+}
+
+/* ============================================
+   SECTION TAG
+   ============================================ */
+
+.dark-mode .section-tag {
+    background: var(--gold-gradient);
+    color: var(--primary-dark);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   BACK TO TOP
+   ============================================ */
+
+.dark-mode .back-to-top {
+    background: var(--brown-gradient);
+    color: var(--secondary-color);
+    box-shadow: var(--shadow-lg), var(--shadow-gold);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.dark-mode .back-to-top:hover {
+    background: var(--gold-gradient);
+    color: var(--primary-dark);
+    box-shadow: var(--shadow-xl), 0 0 30px rgba(212, 175, 55, 0.6);
+}
+
+/* ============================================
+   DARK MODE TOGGLE BUTTON
+   ============================================ */
+
+.dark-mode-toggle {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-base);
+    margin-left: var(--spacing-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-mode-toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: var(--gold-gradient);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+    z-index: 0;
+}
+
+.dark-mode-toggle:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.dark-mode-toggle i {
+    position: relative;
+    z-index: 1;
+    transition: var(--transition-base);
+}
+
+.dark-mode-toggle:hover {
+    border-color: var(--secondary-color);
+    transform: scale(1.1) rotate(15deg);
+}
+
+.dark-mode-toggle:hover i {
+    color: var(--primary-dark);
+}
+
+.dark-mode-toggle:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+.dark-mode .dark-mode-toggle {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.dark-mode .dark-mode-toggle:hover {
+    border-color: var(--accent-color);
+}
+
+.dark-mode .dark-mode-toggle:hover i {
+    color: var(--primary-dark);
+}
+
+/* ============================================
+   SCROLL PROGRESS
+   ============================================ */
+
+.dark-mode .scroll-progress {
+    background: var(--gold-gradient);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* ============================================
+   PARTICLES
+   ============================================ */
+
+.dark-mode .particle {
+    background: var(--secondary-color);
+    opacity: 0.4;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .dark-mode-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        box-shadow: var(--shadow-lg), var(--shadow-gold);
+        margin-left: 0;
+    }
+    
+    .dark-mode .dark-mode-toggle {
+        box-shadow: var(--shadow-lg), var(--shadow-gold);
+    }
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+   ============================================ */
+
+.dark-mode * {
+    transition: background-color var(--transition-base),
+                color var(--transition-base),
+                border-color var(--transition-base),
+                box-shadow var(--transition-base);
+}
