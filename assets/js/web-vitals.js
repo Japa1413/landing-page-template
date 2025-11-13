@@ -13,7 +13,10 @@
      */
     function sendToAnalytics(metric) {
         if (typeof gtag === 'undefined') {
-            console.log('Web Vital:', metric);
+            // Analytics não disponível - silencioso em produção
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                console.log('Web Vital:', metric);
+            }
             return;
         }
 
@@ -48,7 +51,10 @@
      */
     function startMonitoring() {
         if (typeof webVitals === 'undefined') {
-            console.warn('Web Vitals library not loaded');
+            // Biblioteca não carregada - silencioso em produção
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                console.warn('Web Vitals library not loaded');
+            }
             return;
         }
 

@@ -1,7 +1,7 @@
 {
-  "name": "Dra. Nome do Profissional - Advogada OAB/XX 00000",
+  "name": "Nome do Profissional - Título Profissional - Registro XX 00000",
   "short_name": "Nome do Profissional",
-  "description": "Advogada especializada em direito civil, trabalhista e empresarial. Atendimento em Cidade 1 e Cidade 2 - DF.",
+  "description": "Profissional especializado em área de atuação. Atendimento em Cidade 1 e Cidade 2 - Estado.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#8B4513",
@@ -66,7 +66,7 @@
     {
       "name": "Agendar Consulta",
       "short_name": "Agendar",
-      "description": "Agende uma consulta jurídica",
+      "description": "Agende uma consulta",
       "url": "/#contato",
       "icons": [
         {

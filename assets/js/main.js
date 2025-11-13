@@ -190,7 +190,10 @@
                         showNotification('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
                         contactForm.reset();
                     } catch (error) {
-                        console.error('Erro ao enviar formulário:', error);
+                        // Log apenas em desenvolvimento
+                        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                            console.error('Erro ao enviar formulário:', error);
+                        }
                         showNotification('Erro ao enviar mensagem. Por favor, tente novamente ou entre em contato por telefone.', 'error');
                     } finally {
                         submitButton.disabled = originalDisabled;

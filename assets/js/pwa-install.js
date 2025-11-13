@@ -30,7 +30,10 @@
 
         // Escuta quando o app é instalado
         window.addEventListener('appinstalled', () => {
-            console.log('PWA instalado com sucesso');
+            // Log apenas em desenvolvimento
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                console.log('PWA instalado com sucesso');
+            }
             hideInstallButton();
             deferredPrompt = null;
             
@@ -110,9 +113,15 @@
         const { outcome } = await deferredPrompt.userChoice;
 
         if (outcome === 'accepted') {
-            console.log('Usuário aceitou a instalação');
+            // Log apenas em desenvolvimento
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                console.log('Usuário aceitou a instalação');
+            }
         } else {
-            console.log('Usuário rejeitou a instalação');
+            // Log apenas em desenvolvimento
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                console.log('Usuário rejeitou a instalação');
+            }
         }
 
         deferredPrompt = null;
