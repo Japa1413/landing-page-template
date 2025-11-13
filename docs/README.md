@@ -35,6 +35,7 @@ Documentação de todas as melhorias implementadas:
 ### 06. Análises
 Análises técnicas realizadas:
 - [Análise e Melhorias](06_ANALISES/ANALISE_E_MELHORIAS.md)
+- [Análise e Correções Finais](06_ANALISES/ANALISE_E_CORRECOES_FINAIS.md)
 
 ### 07. Guia de Finalização
 Informações necessárias para finalizar o projeto:
@@ -48,6 +49,9 @@ Histórico de mudanças do projeto:
 ### 09. Scripts Utilitários
 Scripts auxiliares e utilitários:
 - [Test Server](09_SCRIPTS_UTILITARIOS/test-server.ps1)
+- [Setup GitHub](09_SCRIPTS_UTILITARIOS/SETUP_GITHUB.md)
+- [Comandos Git](09_SCRIPTS_UTILITARIOS/COMANDOS_GIT.md)
+- [Guia Rápido GitHub](09_SCRIPTS_UTILITARIOS/README_GITHUB.md)
 - [README](09_SCRIPTS_UTILITARIOS/README.md)
 
 ### 10. Estrutura do Projeto
