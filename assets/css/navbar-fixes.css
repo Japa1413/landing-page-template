@@ -1,0 +1,183 @@
+/**
+ * Navbar Fixes
+ * Correções específicas para problemas de layout na navegação
+ * 
+ * @version 1.0.0
+ */
+
+/* ============================================
+   NAVBAR LAYOUT FIXES
+   ============================================ */
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    gap: var(--spacing-sm);
+    position: relative;
+    width: 100%;
+}
+
+/* Logo sempre à esquerda */
+.logo {
+    flex: 0 0 auto;
+    order: 1;
+}
+
+/* Menu sempre no centro/direita */
+.nav-menu {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    order: 2;
+}
+
+/* Dark mode toggle sempre à direita */
+.dark-mode-toggle {
+    order: 3;
+    flex-shrink: 0;
+}
+
+/* Menu toggle (mobile) sempre à direita */
+.menu-toggle {
+    order: 3;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   DESKTOP LAYOUT
+   ============================================ */
+
+@media (min-width: 769px) {
+    .nav-wrapper {
+        gap: var(--spacing-md);
+    }
+    
+    .nav-menu {
+        gap: var(--spacing-md);
+    }
+    
+    .nav-link {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .nav-link.btn-cta {
+        margin-left: var(--spacing-sm);
+    }
+    
+    /* Garante que dark mode toggle não quebre o layout */
+    .dark-mode-toggle {
+        margin-left: var(--spacing-sm);
+    }
+}
+
+/* ============================================
+   MOBILE LAYOUT FIXES
+   ============================================ */
+
+@media (max-width: 768px) {
+    .nav-wrapper {
+        flex-wrap: nowrap;
+        gap: var(--spacing-xs);
+    }
+    
+    .logo {
+        flex: 0 0 auto;
+        max-width: calc(100% - 100px);
+    }
+    
+    .logo-img {
+        max-height: 40px;
+    }
+    
+    .nav-menu {
+        order: 3;
+    }
+    
+    .menu-toggle {
+        order: 2;
+        margin-left: auto;
+    }
+    
+    .dark-mode-toggle {
+        order: 4;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        margin-left: 0;
+        z-index: 999;
+    }
+    
+    /* Esconde dark mode toggle no nav-wrapper em mobile */
+    .nav-wrapper .dark-mode-toggle {
+        display: none;
+    }
+}
+
+/* ============================================
+   NAV MENU ITEMS FIXES
+   ============================================ */
+
+.nav-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu .nav-link {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* ============================================
+   OVERFLOW FIXES
+   ============================================ */
+
+.navbar {
+    overflow: visible;
+}
+
+.nav-wrapper {
+    overflow: visible;
+}
+
+.nav-menu {
+    overflow: visible;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+/* ============================================
+   Z-INDEX FIXES
+   ============================================ */
+
+.navbar {
+    z-index: 1000;
+}
+
+.nav-menu {
+    z-index: 999;
+}
+
+.menu-toggle {
+    z-index: 1001;
+}
+
+.dark-mode-toggle {
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .dark-mode-toggle {
+        z-index: 999;
+    }
+}
+

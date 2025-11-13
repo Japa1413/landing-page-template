@@ -408,6 +408,8 @@ form .btn,
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-sm) 0;
+    gap: var(--spacing-sm);
+    position: relative;
 }
 
 .logo {
@@ -442,16 +444,26 @@ form .btn,
     list-style: none;
     align-items: center;
     gap: var(--spacing-md);
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
     font-weight: 500;
     color: var(--text-dark);
-    padding: var(--spacing-xs) 0;
+    padding: var(--spacing-xs) var(--spacing-xs);
     position: relative;
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
+    text-decoration: none;
+    transition: var(--transition-base);
 }
 
 .nav-link::after {
@@ -465,9 +477,17 @@ form .btn,
     transition: var(--transition-base);
 }
 
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
+}
+
+.nav-link.active {
+    color: var(--primary-color);
 }
 
 /* Remove underline effect for CTA button in nav */
@@ -483,6 +503,8 @@ form .btn,
     border: none;
     cursor: pointer;
     padding: var(--spacing-xs);
+    z-index: 1001;
+    position: relative;
 }
 
 .menu-toggle span {
@@ -1504,12 +1526,16 @@ a:focus-visible {
         top: 70px;
         left: -100%;
         width: 100%;
+        max-width: 100vw;
         height: calc(100vh - 70px);
         background-color: var(--bg-white);
         flex-direction: column;
         padding: var(--spacing-md);
         transition: var(--transition-base);
         box-shadow: var(--shadow-lg);
+        z-index: 999;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     
     .nav-menu.active {
@@ -1517,10 +1543,19 @@ a:focus-visible {
     }
     
     /* Garante alinhamento correto dos links no menu mobile */
+    .nav-menu li {
+        width: 100%;
+    }
+    
     .nav-menu .nav-link {
         width: 100%;
         justify-content: flex-start;
-        padding: var(--spacing-sm) 0;
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-bottom: 1px solid var(--border-light);
+    }
+    
+    .nav-menu .nav-link:last-of-type {
+        border-bottom: none;
     }
     
     .nav-menu .nav-link.btn-cta {
@@ -1528,6 +1563,8 @@ a:focus-visible {
         margin-top: var(--spacing-sm);
         padding: 0.75rem 1.5rem;
         min-height: 44px;
+        border-bottom: none;
+        border-radius: var(--radius-md);
     }
     
     .hero-title {

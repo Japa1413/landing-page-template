@@ -468,6 +468,8 @@
     margin-left: var(--spacing-sm);
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
 }
 
 .dark-mode-toggle::before {
