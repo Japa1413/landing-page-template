@@ -438,12 +438,6 @@ assets/images/
 
 ---
 
-## 📞 CONTATO PARA DÚVIDAS
-
-Se tiver dúvidas sobre alguma informação solicitada, entre em contato para esclarecimentos.
-
----
-
 **Data de Criação:** 2025-01-11  
 **Versão:** 1.0.0  
 **Status:** ✅ Projeto pronto para receber informações de finalização
