@@ -418,7 +418,7 @@
 }
 
 .dark-mode .footer-bottom {
-    border-top: 1px solid var(--border-color);
+    border-top: none;
     color: var(--text-lighter);
 }
 

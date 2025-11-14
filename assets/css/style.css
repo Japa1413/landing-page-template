@@ -492,7 +492,19 @@ form .btn,
 
 /* Remove underline effect for CTA button in nav */
 .nav-link.btn-cta::after {
-    display: none;
+    display: none !important;
+}
+
+/* Garante que o botão CTA no menu não tenha underline */
+.nav-link.btn-cta {
+    position: relative;
+}
+
+.nav-link.btn-cta::after {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 .menu-toggle {
@@ -1432,7 +1444,7 @@ a:focus-visible {
 .footer-bottom {
     text-align: center;
     padding-top: var(--spacing-md);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
     color: rgba(255, 255, 255, 0.8);
 }
 
