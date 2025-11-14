@@ -490,6 +490,14 @@ form .btn,
     color: var(--primary-color);
 }
 
+/* Garante que botão CTA não tenha underline mesmo em estados hover/active */
+.nav-link.btn-cta:hover::after,
+.nav-link.btn-cta.active::after {
+    width: 0 !important;
+    display: none !important;
+    height: 0 !important;
+}
+
 /* Remove underline effect for CTA button in nav */
 .nav-link.btn-cta::after {
     display: none !important;

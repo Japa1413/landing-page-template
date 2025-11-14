@@ -132,6 +132,14 @@
     white-space: nowrap;
 }
 
+/* Garante que botão CTA no menu não tenha underline */
+.nav-menu .nav-link.btn-cta::after {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    content: none !important;
+}
+
 /* ============================================
    OVERFLOW FIXES
    ============================================ */
