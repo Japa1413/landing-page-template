@@ -36,6 +36,8 @@ Documentação de todas as melhorias implementadas:
 Análises técnicas realizadas:
 - [Análise e Melhorias](06_ANALISES/ANALISE_E_MELHORIAS.md)
 - [Análise e Correções Finais](06_ANALISES/ANALISE_E_CORRECOES_FINAIS.md)
+- [Correções de Layout nos Menus](06_ANALISES/CORRECOES_LAYOUT_MENUS.md)
+- [Correções: Botão e Rodapé](06_ANALISES/CORRECOES_BOTAO_RODAPE.md)
 
 ### 07. Guia de Finalização
 Informações necessárias para finalizar o projeto:
