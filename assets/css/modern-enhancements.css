@@ -282,6 +282,26 @@
     width: 100%;
 }
 
+/* REMOVE COMPLETAMENTE O ::before DO BOTÃO CTA NO MENU */
+.nav-link.btn-cta::before {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.nav-link.btn-cta:hover::before,
+.nav-link.btn-cta.active::before {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
 /* ============================================
    ENHANCED CONTACT ITEMS
    ============================================ */

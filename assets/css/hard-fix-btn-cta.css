@@ -1,0 +1,144 @@
+/**
+ * HARD FIX - Botão Agendar Consulta
+ * Correção agressiva para remover TODAS as linhas amarelas do botão CTA
+ * 
+ * @version 1.0.0
+ * @priority 9999 - Máxima prioridade
+ */
+
+/* ============================================
+   REMOÇÃO COMPLETA DE TODOS OS PSEUDO-ELEMENTOS
+   ============================================ */
+
+/* Remove ::after (underline) */
+.nav-link.btn-cta::after,
+.nav-menu .nav-link.btn-cta::after,
+.nav-wrapper .nav-link.btn-cta::after,
+.navbar .nav-link.btn-cta::after {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    position: static !important;
+}
+
+/* Remove ::before (linha amarela) */
+.nav-link.btn-cta::before,
+.nav-menu .nav-link.btn-cta::before,
+.nav-wrapper .nav-link.btn-cta::before,
+.navbar .nav-link.btn-cta::before {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    position: static !important;
+}
+
+/* Remove em TODOS os estados */
+.nav-link.btn-cta:hover::after,
+.nav-link.btn-cta:hover::before,
+.nav-link.btn-cta:active::after,
+.nav-link.btn-cta:active::before,
+.nav-link.btn-cta:focus::after,
+.nav-link.btn-cta:focus::before,
+.nav-link.btn-cta.active::after,
+.nav-link.btn-cta.active::before,
+.nav-link.btn-cta:visited::after,
+.nav-link.btn-cta:visited::before {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove também do elemento pai (li) */
+.nav-menu li:has(.btn-cta)::before,
+.nav-menu li:has(.btn-cta)::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Garante que não há bordas */
+.nav-link.btn-cta {
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    text-decoration: none !important;
+    box-shadow: var(--shadow-gold) !important;
+}
+
+/* Remove qualquer linha de texto-decoration */
+.nav-link.btn-cta,
+.nav-link.btn-cta:hover,
+.nav-link.btn-cta:active,
+.nav-link.btn-cta:focus,
+.nav-link.btn-cta.active {
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+    text-decoration-color: transparent !important;
+    text-decoration-style: none !important;
+    text-underline-offset: 0 !important;
+}
+
+/* Garante que o botão não tenha nenhum elemento visual extra */
+.nav-link.btn-cta * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove qualquer background ou border de pseudo-elementos do container */
+.nav-menu:has(.btn-cta)::before,
+.nav-menu:has(.btn-cta)::after,
+.nav-wrapper:has(.btn-cta)::before,
+.nav-wrapper:has(.btn-cta)::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* ============================================
+   ESPECIFICIDADE MÁXIMA PARA GARANTIR
+   ============================================ */
+
+/* Regra com especificidade máxima */
+.navbar .nav-wrapper .nav-menu li .nav-link.btn-cta::after,
+.navbar .nav-wrapper .nav-menu li .nav-link.btn-cta::before {
+    all: unset !important;
+    content: none !important;
+    display: none !important;
+}
+
+/* ============================================
+   MOBILE - GARANTIR TAMBÉM
+   ============================================ */
+
+@media (max-width: 768px) {
+    .nav-menu .nav-link.btn-cta::after,
+    .nav-menu .nav-link.btn-cta::before {
+        content: none !important;
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+}
+
